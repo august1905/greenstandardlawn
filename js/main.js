@@ -8,9 +8,9 @@
   /* ---------- footer year ---------- */
   $$('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
 
-  /* ---------- header rule on scroll ---------- */
+  /* ---------- header: clear over the photo, solid once you scroll ---------- */
   var header = $('[data-header]');
-  function onScroll() { header.classList.toggle('is-scrolled', window.scrollY > 8); }
+  function onScroll() { header.classList.toggle('is-solid', window.scrollY > 40); }
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
 
@@ -20,11 +20,34 @@
   function setMenu(open) {
     toggle.setAttribute('aria-expanded', String(open));
     nav.classList.toggle('is-open', open);
+    header.classList.toggle('menu-open', open);
     toggle.querySelector('.menu-toggle-label').textContent = open ? 'Close' : 'Menu';
   }
   toggle.addEventListener('click', function () { setMenu(toggle.getAttribute('aria-expanded') !== 'true'); });
   $$('a', nav).forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+
+  /* ---------- services dropdown: hover or click on desktop, tap to expand on phones ---------- */
+  var desktopHover = window.matchMedia('(hover: hover) and (pointer: fine) and (min-width: 961px)');
+  $$('[data-dd]').forEach(function (dd) {
+    var btn = $('[data-dd-btn]', dd);
+    var closeTimer = 0;
+    function set(open) {
+      dd.classList.toggle('is-open', open);
+      btn.setAttribute('aria-expanded', String(open));
+    }
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      if (desktopHover.matches) set(true); else set(!dd.classList.contains('is-open'));
+    });
+    dd.addEventListener('mouseenter', function () { if (!desktopHover.matches) return; clearTimeout(closeTimer); set(true); });
+    dd.addEventListener('mouseleave', function () { if (!desktopHover.matches) return; closeTimer = setTimeout(function () { set(false); }, 200); });
+    dd.addEventListener('focusout', function (e) { if (desktopHover.matches && !dd.contains(e.relatedTarget)) set(false); });
+    document.addEventListener('click', function (e) { if (!dd.contains(e.target)) set(false); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && dd.classList.contains('is-open')) { set(false); btn.focus(); }
+    });
+  });
 
   /* ---------- reveal on scroll ---------- */
   var revealables = $$('[data-reveal]');
@@ -160,6 +183,13 @@
   var form = $('[data-quote-form]');
   if (form) {
     var status = $('[data-form-status]');
+
+    // arriving from a service page (?service=cleanup) pre-selects that service
+    var wanted = new URLSearchParams(window.location.search).get('service');
+    if (wanted && /^[a-z]+$/.test(wanted)) {
+      var chip = form.querySelector('[data-chip="' + wanted + '"]');
+      if (chip) $$('[data-chip]', form).forEach(function (c) { c.checked = c === chip; });
+    }
     var CHECKS = {
       name: function (v) { return v.trim().length > 1; },
       phone: function (v) { return v.replace(/\D/g, '').length >= 10; },

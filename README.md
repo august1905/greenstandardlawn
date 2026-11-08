@@ -6,16 +6,20 @@ A hand-built redesign of [greenstandardlawn.co](https://www.greenstandardlawn.co
 
 The preview is marked `noindex`, so it won't show up in search results or compete with the live Wix site.
 
-## What's on the page
+## Pages
 
-| Section | What it does |
+| Page | What's on it |
 |---|---|
-| **Hero plot** | An interactive lawn. Move the cursor (or swipe sideways on a phone) to mow it. Stripes follow real lawn physics: mowing up or right paints the light stripe, down or left paints the dark one. A counter tracks the square feet mowed, and finishing the lawn links to the quote form. |
-| **Services** | The four services, each with a small landscape-plan swatch (stripes, leaves, hedge and tree symbols, snow). |
-| **The year in a yard** | A 12-month chart showing when each service usually runs. A "Today" marker and the note above the chart update automatically from the visitor's date. |
-| **Proof** | The real striped-lawn photo from the current site, plus the testimonial. |
-| **The Standard** | The four values from the current site, next to a ruler animation where the grass gets cut to one even height. |
-| **Quote form** | Service chips, frequency, and contact fields. Submitting opens the visitor's email app with everything filled in, addressed to greenstandard.team@gmail.com. |
+| `index.html` | Full-screen photo hero with the menu over it, four big service tiles that open each service page, the About section (ruler animation and the four values), the season chart, the "our work" photo and testimonial, and the quote form. |
+| `services/mowing-trimming.html` | Service page, plus the interactive lawn you can mow with your cursor. |
+| `services/seasonal-cleanups.html` | Service page. |
+| `services/landscape-detailing.html` | Service page. |
+| `services/snow-removal.html` | "Coming soon" page with a waitlist button. |
+
+Every service page has a photo banner, a short intro with key facts, three "what's included" cards, that service's months on the season chart, a quote button, and links to the other services.
+
+The **Services** menu in the header is a dropdown on desktop (hover or click) and an expanding list in the mobile menu.
+The quote buttons on service pages link to `index.html?service=…#quote`, which pre-selects that service in the form.
 
 ## Brand
 
@@ -25,18 +29,26 @@ Type is Fraunces (headings, same as the current site), Hanken Grotesk (body) and
 ## Files
 
 ```
-index.html        all page content
-css/styles.css    all styling
-js/lawn.js        the mowable lawn and the striped footer
-js/main.js        menu, scroll reveals, the season chart, the ruler animation, the quote form
+index.html                 home page
+services/*.html            one page per service
+css/styles.css             all styling
+js/main.js                 header, menus, scroll reveals, season chart, ruler animation, quote form
+js/lawn.js                 the mowable lawn (mowing page) and the striped footer band
 assets/favicon.svg
 ```
 
 No build step and no dependencies. Edit a file, commit, push to `main`, and GitHub Pages republishes in about a minute.
+The header and footer are repeated in each page, so a change to the menu or footer has to be made in all five files.
+
+## Photos
+
+- The "Our work" photo on the home page is Green Standard's own, loaded from the current Wix site.
+- The hero, service tiles and banners are free [Unsplash](https://unsplash.com/license) photos used as placeholders. Swap them for Green Standard's own photos (their Instagram is a good source) by changing the `images.unsplash.com/...` URLs.
 
 ## Before this goes live
 
-- **Confirm the season months** in the "year in a yard" chart with Preston (they're typical, not taken from the current site).
+- **Replace the stock photos** with real ones of Green Standard's work.
+- **Confirm the season months** with Preston (they're typical, not taken from the current site).
 - **The quote form** opens the visitor's email app. For submissions that land in an inbox or CRM without that step, connect a form service (Formspree, Zoho Forms, etc.).
-- **The lawn photo** is loaded from the current Wix site's image server. Copy it into `assets/` before cancelling Wix.
-- **Remove the `noindex` meta tag** in `index.html` when this replaces the live site.
+- **Copy the "Our work" photo** into `assets/` before cancelling Wix.
+- **Remove the `noindex` meta tag** from every page when this replaces the live site.

@@ -8,26 +8,20 @@
   <!-- Preview build: keep it out of search results so it never competes with greenstandardlawn.co -->
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#2B3C2C">
-  <meta property="og:title" content="Green Standard Lawn Co.">
-  <meta property="og:description" content="Raising the standard, one lawn at a time.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..800,0..100,0..1;1,9..144,300..800,0..100,0..1&family=Hanken+Grotesk:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="css/styles.css">
   <script>document.documentElement.classList.add('js')</script>
 </head>
-<body>
+<body class="page-home">
   <a class="skip" href="#main">Skip to content</a>
-
   <header class="site-header" data-header>
     <div class="wrap header-inner">
-      <a class="brand" href="#top" aria-label="Green Standard Lawn Co., back to top">
-        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
-          <rect width="32" height="32" rx="7" fill="#2B3C2C"/>
-          <path d="M6 6h5v20H6zM16 6h5v20h-5z" fill="#4C654B"/>
-          <path d="M11 6h5v20h-5zM21 6h5v20h-5z" fill="#7A9475"/>
-        </svg>
+      <a class="brand" href="index.html" aria-label="Green Standard Lawn Co. home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#2B3C2C"/><path d="M6 6h5v20H6zM16 6h5v20h-5z" fill="#4C654B"/><path d="M11 6h5v20h-5zM21 6h5v20h-5z" fill="#7A9475"/></svg>
         <span class="brand-name">Green Standard <span>Lawn Co.</span></span>
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
@@ -35,241 +29,181 @@
         <span class="menu-toggle-label">Menu</span>
       </button>
       <nav class="site-nav" id="site-nav" aria-label="Primary" data-nav>
-        <a href="#services">Services</a>
-        <a href="#seasons">Seasons</a>
-        <a href="#standard">The Standard</a>
-        <a class="btn btn-small" href="#quote">Complimentary quote</a>
+        <div class="nav-dd" data-dd>
+          <button class="nav-dd-btn" type="button" aria-expanded="false" aria-controls="dd-services" data-dd-btn>Services <svg viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <div class="nav-dd-panel" id="dd-services">
+            <a href="services/mowing-trimming.html"><span class="dd-thumb"><img src="https://images.unsplash.com/photo-1689728318937-17d24bc0a65c?w=112&h=112&fit=crop&q=72&auto=format" alt="" width="56" height="56" loading="lazy"></span><span><b>Mowing &amp; Trimming</b><small>Weekly or bi-weekly</small></span></a>
+            <a href="services/seasonal-cleanups.html"><span class="dd-thumb"><img src="https://images.unsplash.com/photo-1733286125300-b4c5563295ad?w=112&h=112&fit=crop&q=72&auto=format" alt="" width="56" height="56" loading="lazy"></span><span><b>Seasonal Cleanups</b><small>Spring + fall</small></span></a>
+            <a href="services/landscape-detailing.html"><span class="dd-thumb"><img src="https://images.unsplash.com/photo-1543309959-4d45288d1629?w=112&h=112&fit=crop&q=72&auto=format" alt="" width="56" height="56" loading="lazy"></span><span><b>Landscape Detailing</b><small>Hedges · Mulch · Small trees</small></span></a>
+            <a href="services/snow-removal.html"><span class="dd-thumb"><img src="https://images.unsplash.com/photo-1483385573908-0a2108937c4a?w=112&h=112&fit=crop&q=72&auto=format" alt="" width="56" height="56" loading="lazy"></span><span><b>Snow Removal</b><small>Coming soon</small></span></a>
+            <a class="dd-all" href="index.html#services">See all services</a>
+          </div>
+        </div>
+        <a href="index.html#standard">About</a>
+        <a href="index.html#seasons">Seasons</a>
+        <a class="btn btn-small" href="index.html#quote">Complimentary quote</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
-
-    <!-- ============ HERO ============ -->
-    <section class="hero" id="top">
-      <div class="wrap hero-copy">
-        <p class="eyebrow eyebrow-plain">Mowing &amp; trimming <i>/</i> Seasonal cleanups <i>/</i> Landscape detailing</p>
-        <h1 class="hero-title">
-          <span class="line">Raising the <em>standard,</em></span>
-          <span class="line">one lawn at a time.</span>
-        </h1>
-        <dl class="hero-specs">
-          <div><dt>Schedule</dt><dd>Weekly or bi-weekly</dd></div>
-          <div><dt>Crew</dt><dd>Small and hands-on</dd></div>
-          <div><dt>Coverage</dt><dd>Licensed &amp; insured</dd></div>
-        </dl>
-        <div class="hero-aside">
-          <p>Weekly and bi-weekly lawn care from a small, hands-on crew that treats your yard like its own. Clean edges, sharp stripes, and people who show up when they said they would.</p>
-          <div class="hero-ctas">
-            <a class="btn" href="#quote">Get a complimentary quote</a>
-            <a class="text-link" href="tel:2622903375">or call 262-290-3375</a>
-          </div>
+    <section class="hero-photo" id="top">
+      <img class="hero-img" src="https://images.unsplash.com/photo-1764969370921-7c8df49171cd?w=2400&fit=crop&q=72&auto=format" srcset="https://images.unsplash.com/photo-1764969370921-7c8df49171cd?w=1000&fit=crop&q=72&auto=format 1000w, https://images.unsplash.com/photo-1764969370921-7c8df49171cd?w=1800&fit=crop&q=72&auto=format 1800w, https://images.unsplash.com/photo-1764969370921-7c8df49171cd?w=2600&fit=crop&q=72&auto=format 2600w" sizes="100vw" alt="A freshly mowed, striped lawn edged by shade trees" fetchpriority="high">
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="wrap hero-inner">
+        <p class="eyebrow eyebrow-photo">Lawn care <i>/</i> Seasonal cleanups <i>/</i> Landscape detailing</p>
+        <h1 class="display"><span class="line">Raising the <em>standard,</em></span> <span class="line">one lawn at a time.</span></h1>
+        <p class="hero-sub">Weekly and bi-weekly lawn care from a small, hands-on crew that treats your yard like its own. Clean edges, sharp stripes, and people who show up when they said they would.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-light" href="#quote">Get a complimentary quote</a>
+          <a class="text-link text-link-light" href="tel:2622903375">or call 262-290-3375</a>
         </div>
       </div>
-
-      <figure class="plot" data-plot>
-        <div class="plot-frame">
-          <canvas class="plot-canvas" data-lawn aria-hidden="true"></canvas>
-          <div class="plot-mower" data-mower aria-hidden="true">
-            <svg viewBox="0 0 60 92">
-              <path d="M17 54 13 86M43 54l4 32" stroke="#EDECEC" stroke-width="3.2" stroke-linecap="round" fill="none"/>
-              <path d="M9 87h42" stroke="#EDECEC" stroke-width="4.5" stroke-linecap="round"/>
-              <rect x="1" y="7" width="9" height="15" rx="3.5" fill="#1d2a1e"/>
-              <rect x="50" y="7" width="9" height="15" rx="3.5" fill="#1d2a1e"/>
-              <rect x="1" y="36" width="9" height="15" rx="3.5" fill="#1d2a1e"/>
-              <rect x="50" y="36" width="9" height="15" rx="3.5" fill="#1d2a1e"/>
-              <rect x="7" y="2" width="46" height="54" rx="13" fill="#6D274F"/>
-              <rect x="7" y="2" width="46" height="54" rx="13" fill="none" stroke="#4f1b39" stroke-width="2"/>
-              <circle cx="30" cy="28" r="12" fill="#EDECEC"/>
-              <circle cx="30" cy="28" r="5" fill="#6D274F"/>
-            </svg>
-          </div>
-
-          <div class="plot-hud plot-hud-tl">
-            <span class="hud-chip">Plot 01 &middot; Your yard</span>
-          </div>
-          <div class="plot-hud plot-hud-tr">
-            <span class="hud-chip hud-count"><b data-sqft>0</b> sq ft mowed</span>
-            <svg class="compass" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l4 10h-8z" fill="#EDECEC"/><path d="M12 21l-4-8h8z" fill="none" stroke="#EDECEC" stroke-width="1.2"/></svg>
-          </div>
-          <div class="plot-hud plot-hud-bl">
-            <span class="hud-chip hud-hint" data-hint aria-live="polite">Watch the first passes&hellip;</span>
-          </div>
-          <div class="plot-hud plot-hud-br">
-            <button class="hud-btn" type="button" data-automow>Mow it for me</button>
-            <button class="hud-btn hud-btn-ghost" type="button" data-regrow>Let it grow back</button>
-          </div>
+      <div class="hero-strip">
+        <div class="wrap hero-strip-inner">
+          <span>Licensed &amp; insured</span>
+          <span>Weekly or bi-weekly</span>
+          <span>Small, hands-on crew</span>
+          <a class="hero-scroll" href="#services">Our services <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v12M3 9l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
         </div>
-        <figcaption class="plot-caption">
-          <span>Fig. 0</span> Mowing direction sets the stripe. Grass bent away from you catches the light; grass bent toward you looks dark. Try it.
-        </figcaption>
-      </figure>
+      </div>
     </section>
 
-    <!-- ============ SERVICES ============ -->
-    <section class="services" id="services">
+    <section class="services-home" id="services">
       <div class="wrap">
-        <header class="section-head" data-reveal>
-          <p class="eyebrow">01 <span>What we do</span></p>
-          <h2>The whole yard, <em>handled.</em></h2>
-          <p class="section-lede">Three services we run every season, and a fourth on the way. Book one or bundle them. Either way it's the same crew and the same standard.</p>
+        <header class="section-head section-head-split" data-reveal>
+          <div>
+            <p class="eyebrow">01 <span>Our services</span></p>
+            <h2>The whole yard, <em>handled.</em></h2>
+          </div>
+          <p class="section-lede">Three services we run every season and a fourth on the way. Pick one to see exactly what's included.</p>
         </header>
-
-        <ol class="service-list">
-          <li class="service" data-reveal>
-            <span class="service-num">01</span>
-            <div class="swatch" aria-hidden="true">
-              <svg viewBox="0 0 96 96"><rect width="96" height="96" fill="#4C654B"/><path d="M0 0h16v96H0zM32 0h16v96H32zM64 0h16v96H64z" fill="#7A9475"/></svg>
-            </div>
-            <div class="service-title">
-              <h3>Mowing &amp; Trimming</h3>
-              <p class="service-meta">Weekly or bi-weekly</p>
-            </div>
-            <p class="service-body">Our core service and the one we obsess over. Precise mowing, every edge trimmed clean, and a steady schedule, so the lawn looks freshly done all season and you never have to think about it.</p>
-          </li>
-
-          <li class="service" data-reveal>
-            <span class="service-num">02</span>
-            <div class="swatch" aria-hidden="true">
-              <svg viewBox="0 0 96 96">
-                <defs><path id="leaf" d="M0 0C5-7 15-7 20 0 15 7 5 7 0 0Z"/></defs>
-                <rect width="96" height="96" fill="#E3E1DC"/>
-                <g fill="#3B4D3C">
-                  <use href="#leaf" transform="translate(10 22) rotate(-20)"/>
-                  <use href="#leaf" transform="translate(58 14) rotate(35)"/>
-                  <use href="#leaf" transform="translate(30 58) rotate(70)"/>
-                  <use href="#leaf" transform="translate(66 66) rotate(-50)"/>
-                </g>
-                <g fill="#6D274F">
-                  <use href="#leaf" transform="translate(40 34) rotate(15) scale(.85)"/>
-                  <use href="#leaf" transform="translate(8 74) rotate(-75) scale(.8)"/>
-                  <use href="#leaf" transform="translate(76 40) rotate(110) scale(.75)"/>
-                </g>
-                <g stroke="#E3E1DC" stroke-width="1"><path d="M12 21.3l18-6.5M60 15l15 11M42 34l17 4.6"/></g>
-              </svg>
-            </div>
-            <div class="service-title">
-              <h3>Seasonal Cleanups</h3>
-              <p class="service-meta">Spring + fall</p>
-            </div>
-            <p class="service-body">In spring we clear leaves, debris, and winter buildup to jump-start healthy growth. In fall we pull the leaves and get the lawn ready for winter. Either way, the property is left looking pristine.</p>
-          </li>
-
-          <li class="service" data-reveal>
-            <span class="service-num">03</span>
-            <div class="swatch" aria-hidden="true">
-              <svg viewBox="0 0 96 96">
-                <rect width="96" height="96" fill="#E3E1DC"/>
-                <g fill="none" stroke="#2B3C2C" stroke-width="2">
-                  <circle cx="34" cy="34" r="20" stroke-dasharray="5 3"/>
-                  <circle cx="34" cy="34" r="12"/>
-                  <path d="M10 82a7 7 0 0 1 14 0 7 7 0 0 1 14 0 7 7 0 0 1 14 0 7 7 0 0 1 14 0 7 7 0 0 1 14 0"/>
-                  <path d="M10 82h70"/>
-                </g>
-                <circle cx="34" cy="34" r="2.6" fill="#6D274F"/>
-                <circle cx="74" cy="30" r="9" fill="none" stroke="#6D274F" stroke-width="2" stroke-dasharray="3 2.4"/>
-              </svg>
-            </div>
-            <div class="service-title">
-              <h3>Landscape Detailing</h3>
-              <p class="service-meta">Hedges &middot; Mulch &middot; Small trees</p>
-            </div>
-            <p class="service-body">Precision hedge trimming, clean mulching, and careful small-tree trimming that brings back the shape and health of your beds and borders. The finishing work that makes a property look cared for.</p>
-          </li>
-
-          <li class="service service-soon" data-reveal>
-            <span class="service-num">04</span>
-            <div class="swatch" aria-hidden="true">
-              <svg viewBox="0 0 96 96">
-                <rect width="96" height="96" fill="#2B3C2C"/>
-                <g fill="#EDECEC">
-                  <circle cx="12" cy="14" r="2"/><circle cx="34" cy="8" r="1.5"/><circle cx="58" cy="18" r="2.2"/><circle cx="82" cy="10" r="1.6"/>
-                  <circle cx="22" cy="36" r="1.6"/><circle cx="46" cy="32" r="2.4"/><circle cx="72" cy="38" r="1.8"/><circle cx="90" cy="30" r="1.4"/>
-                  <circle cx="8" cy="56" r="2.2"/><circle cx="32" cy="60" r="1.5"/><circle cx="56" cy="54" r="1.8"/><circle cx="80" cy="62" r="2.3"/>
-                  <circle cx="18" cy="82" r="1.7"/><circle cx="44" cy="80" r="2.1"/><circle cx="66" cy="86" r="1.5"/><circle cx="88" cy="82" r="1.9"/>
-                </g>
-              </svg>
-            </div>
-            <div class="service-title">
-              <h3>Snow Removal</h3>
-              <p class="service-meta"><span class="tag">Coming soon</span></p>
-            </div>
-            <p class="service-body">Professional snow clearing and winter maintenance. Full details are on the way. Ask about it when you request a quote and we'll put you first in line.</p>
-          </li>
-        </ol>
+        <ul class="tiles">
+        <li data-reveal>
+          <a class="tile" href="services/mowing-trimming.html">
+            <img src="https://images.unsplash.com/photo-1689728318937-17d24bc0a65c?w=1100&h=1240&fit=crop&q=72&auto=format" alt="A string trimmer cleaning up a lawn edge beside a flower bed" width="1100" height="1240" loading="lazy" decoding="async">
+            <span class="tile-shade" aria-hidden="true"></span>
+            <span class="tile-num">01</span>
+            <span class="tile-body">
+              <span class="tile-meta">Weekly or bi-weekly</span>
+              <h3 class="tile-title">Mowing &amp; Trimming</h3>
+              <span class="tile-desc">Precise mowing, every edge trimmed clean, and a steady schedule all season.</span>
+              <span class="tile-cta">View service</span>
+            </span>
+          </a>
+        </li>
+        <li data-reveal>
+          <a class="tile" href="services/seasonal-cleanups.html">
+            <img src="https://images.unsplash.com/photo-1733286125300-b4c5563295ad?w=1100&h=1240&fit=crop&q=72&auto=format" alt="A crew member clearing leaves from a yard with a leaf blower" width="1100" height="1240" loading="lazy" decoding="async">
+            <span class="tile-shade" aria-hidden="true"></span>
+            <span class="tile-num">02</span>
+            <span class="tile-body">
+              <span class="tile-meta">Spring + fall</span>
+              <h3 class="tile-title">Seasonal Cleanups</h3>
+              <span class="tile-desc">A spring and fall reset that clears the leaves, debris, and winter buildup.</span>
+              <span class="tile-cta">View service</span>
+            </span>
+          </a>
+        </li>
+        <li data-reveal>
+          <a class="tile" href="services/landscape-detailing.html">
+            <img src="https://images.unsplash.com/photo-1543309959-4d45288d1629?w=1100&h=1240&fit=crop&q=72&auto=format" alt="Hedge trimmer shaping a round shrub" width="1100" height="1240" loading="lazy" decoding="async">
+            <span class="tile-shade" aria-hidden="true"></span>
+            <span class="tile-num">03</span>
+            <span class="tile-body">
+              <span class="tile-meta">Hedges · Mulch · Small trees</span>
+              <h3 class="tile-title">Landscape Detailing</h3>
+              <span class="tile-desc">Hedge trimming, clean mulching, and careful small-tree trimming.</span>
+              <span class="tile-cta">View service</span>
+            </span>
+          </a>
+        </li>
+        <li data-reveal>
+          <a class="tile" href="services/snow-removal.html">
+            <img src="https://images.unsplash.com/photo-1483385573908-0a2108937c4a?w=1100&h=1240&fit=crop&q=72&auto=format" alt="A person shoveling a snowy driveway" width="1100" height="1240" loading="lazy" decoding="async">
+            <span class="tile-shade" aria-hidden="true"></span>
+            <span class="tile-num">04</span>
+            <span class="tag tile-tag">Coming soon</span>
+            <span class="tile-body">
+              <span class="tile-meta">Winter</span>
+              <h3 class="tile-title">Snow Removal</h3>
+              <span class="tile-desc">Professional snow clearing and winter maintenance. Details coming soon.</span>
+              <span class="tile-cta">View service</span>
+            </span>
+          </a>
+        </li>
+        </ul>
       </div>
     </section>
 
-    <!-- ============ SEASONS ============ -->
+    <section class="standard" id="standard">
+      <div class="wrap standard-grid">
+        <div class="ruler-wrap">
+          <svg class="ruler" data-ruler viewBox="0 0 340 440" role="img" aria-label="Illustration: grass blades measured against a ruler and cut cleanly at one even height"></svg>
+          <p class="ruler-note">Every blade, same height. That's the standard. <button type="button" class="ruler-again" data-ruler-again>Cut it again</button></p>
+        </div>
+        <div class="standard-copy">
+          <header class="section-head" data-reveal>
+            <p class="eyebrow eyebrow-light">02 <span>About us</span></p>
+            <h2>What <em>standard</em> means here.</h2>
+            <p class="section-lede">We're a small, energetic team, and we take this personally. Every yard gets treated like it's our own, and every client like a partner.</p>
+          </header>
+          <ol class="pillars">
+            <li data-reveal><span class="pillar-num">No. 1</span><h3>Detail-driven</h3><p>Clean edges, healthy blades, nothing missed. The small stuff is the whole job.</p></li>
+            <li data-reveal><span class="pillar-num">No. 2</span><h3>Client-focused</h3><p>You get a real person, a consistent schedule, and a crew that listens to how you like your property kept.</p></li>
+            <li data-reveal><span class="pillar-num">No. 3</span><h3>Committed to excellence</h3><p>High-quality care with a personal touch, delivered the same way every visit, all season long.</p></li>
+            <li data-reveal><span class="pillar-num">No. 4</span><h3>Licensed &amp; insured</h3><p>Fully covered, so there's nothing for you to worry about while we work.</p></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
     <section class="seasons" id="seasons">
       <div class="wrap">
         <header class="section-head section-head-split" data-reveal>
           <div>
-            <p class="eyebrow">02 <span>The year in a yard</span></p>
+            <p class="eyebrow">03 <span>The year in a yard</span></p>
             <h2>Right work, <em>right month.</em></h2>
           </div>
           <p class="season-now" data-season-now>Lawn care runs on the calendar. Here's when each service usually happens.</p>
         </header>
-
         <div class="almanac" data-almanac data-reveal role="table" aria-label="Typical months for each service">
           <div class="almanac-row almanac-head" role="row">
             <span class="almanac-label" role="columnheader"><span class="sr-only">Service</span></span>
-            <div class="almanac-track" role="presentation">
-              <span role="columnheader">Jan</span><span role="columnheader">Feb</span><span role="columnheader">Mar</span>
-              <span role="columnheader">Apr</span><span role="columnheader">May</span><span role="columnheader">Jun</span>
-              <span role="columnheader">Jul</span><span role="columnheader">Aug</span><span role="columnheader">Sep</span>
-              <span role="columnheader">Oct</span><span role="columnheader">Nov</span><span role="columnheader">Dec</span>
-            </div>
-          </div>
-
-          <div class="almanac-row" role="row">
-            <span class="almanac-label" role="rowheader">Spring cleanup</span>
-            <div class="almanac-track" role="cell" aria-label="March through May">
-              <span class="bar" style="grid-column: 3 / 6"></span>
-            </div>
+            <div class="almanac-track" role="presentation"><span role="columnheader">Jan</span><span role="columnheader">Feb</span><span role="columnheader">Mar</span><span role="columnheader">Apr</span><span role="columnheader">May</span><span role="columnheader">Jun</span><span role="columnheader">Jul</span><span role="columnheader">Aug</span><span role="columnheader">Sep</span><span role="columnheader">Oct</span><span role="columnheader">Nov</span><span role="columnheader">Dec</span></div>
           </div>
           <div class="almanac-row" role="row">
-            <span class="almanac-label" role="rowheader">Mowing &amp; trimming</span>
-            <div class="almanac-track" role="cell" aria-label="April through October">
-              <span class="bar bar-stripes" style="grid-column: 4 / 11"></span>
-            </div>
+            <span class="almanac-label" role="rowheader"><a href="services/seasonal-cleanups.html">Spring cleanup</a></span>
+            <div class="almanac-track" role="cell" aria-label="March through May"><span class="bar" style="grid-column: 3 / 6"></span></div>
           </div>
           <div class="almanac-row" role="row">
-            <span class="almanac-label" role="rowheader">Landscape detailing</span>
-            <div class="almanac-track" role="cell" aria-label="April through October">
-              <span class="bar bar-outline" style="grid-column: 4 / 11"></span>
-            </div>
+            <span class="almanac-label" role="rowheader"><a href="services/mowing-trimming.html">Mowing &amp; trimming</a></span>
+            <div class="almanac-track" role="cell" aria-label="April through October"><span class="bar bar-stripes" style="grid-column: 4 / 11"></span></div>
           </div>
           <div class="almanac-row" role="row">
-            <span class="almanac-label" role="rowheader">Fall cleanup</span>
-            <div class="almanac-track" role="cell" aria-label="October through November">
-              <span class="bar" style="grid-column: 10 / 12"></span>
-            </div>
+            <span class="almanac-label" role="rowheader"><a href="services/landscape-detailing.html">Landscape detailing</a></span>
+            <div class="almanac-track" role="cell" aria-label="April through October"><span class="bar bar-outline" style="grid-column: 4 / 11"></span></div>
           </div>
           <div class="almanac-row" role="row">
-            <span class="almanac-label" role="rowheader">Snow removal <span class="tag tag-small">Soon</span></span>
-            <div class="almanac-track" role="cell" aria-label="December through March, coming soon">
-              <span class="bar bar-snow" style="grid-column: 1 / 4"></span>
-              <span class="bar bar-snow" style="grid-column: 12 / 13"></span>
-            </div>
+            <span class="almanac-label" role="rowheader"><a href="services/seasonal-cleanups.html">Fall cleanup</a></span>
+            <div class="almanac-track" role="cell" aria-label="October through November"><span class="bar" style="grid-column: 10 / 12"></span></div>
           </div>
-
+          <div class="almanac-row" role="row">
+            <span class="almanac-label" role="rowheader"><a href="services/snow-removal.html">Snow removal</a> <span class="tag tag-small">Soon</span></span>
+            <div class="almanac-track" role="cell" aria-label="December through March, coming soon"><span class="bar bar-snow" style="grid-column: 1 / 4"></span><span class="bar bar-snow" style="grid-column: 12 / 13"></span></div>
+          </div>
           <div class="almanac-today" data-today aria-hidden="true"><span data-today-label>Today</span></div>
         </div>
         <p class="fine">Typical timing. Exact start and end dates follow the weather.</p>
       </div>
     </section>
 
-    <!-- ============ PROOF ============ -->
-    <section class="proof" aria-label="Our work">
-      <figure class="proof-photo" data-reveal>
-        <img
-          src="https://static.wixstatic.com/media/8dad61_daa49fa82b9f46acb04b4b1fa3ff9be0~mv2.jpeg/v1/fill/w_1800,h_1150,al_c,q_85,enc_auto/lawn-stripes.jpeg"
-          alt="A freshly mowed lawn with crisp alternating light and dark stripes, tall trees behind it"
-          width="1800" height="1150" loading="lazy" decoding="async">
-        <figcaption><span>Fig. 1</span> Our work. Fresh stripes, clean lines, nothing left on the walk.</figcaption>
-      </figure>
-      <div class="wrap">
+    <section class="work" aria-label="Our work">
+      <div class="wrap work-grid">
+        <figure class="work-photo" data-reveal>
+          <img src="https://static.wixstatic.com/media/8dad61_daa49fa82b9f46acb04b4b1fa3ff9be0~mv2.jpeg/v1/fill/w_1000,h_1000,al_c,q_85,enc_auto/lawn-stripes.jpeg" alt="A lawn Green Standard mowed, with crisp alternating light and dark stripes" width="1000" height="1000" loading="lazy" decoding="async">
+          <figcaption><span>Our work</span> Fresh stripes, clean lines, nothing left on the walk.</figcaption>
+        </figure>
         <blockquote class="testimonial" data-reveal>
           <svg class="quote-mark" viewBox="0 0 48 40" aria-hidden="true"><path d="M0 40V22C0 9 7 2 20 0l2 6c-7 2-11 6-11 13h9v21zm26 0V22C26 9 33 2 46 0l2 6c-7 2-11 6-11 13h9v21z" fill="currentColor"/></svg>
           <p>I can finally relax and enjoy my yard. Their mowing and trimming service is precise, reliable, and friendly.</p>
@@ -278,47 +212,6 @@
       </div>
     </section>
 
-    <!-- ============ THE STANDARD ============ -->
-    <section class="standard" id="standard">
-      <div class="wrap standard-grid">
-        <div class="ruler-wrap" data-ruler-wrap>
-          <svg class="ruler" data-ruler viewBox="0 0 340 440" role="img" aria-label="Illustration: grass blades measured against a ruler and cut cleanly at one even height"></svg>
-          <p class="ruler-note">Every blade, same height. That's the standard. <button type="button" class="ruler-again" data-ruler-again>Cut it again</button></p>
-        </div>
-
-        <div class="standard-copy">
-          <header class="section-head" data-reveal>
-            <p class="eyebrow eyebrow-light">03 <span>The Green Standard</span></p>
-            <h2>What <em>standard</em> means here.</h2>
-            <p class="section-lede">We're a small, energetic team, and we take this personally. Every yard gets treated like it's our own, and every client like a partner.</p>
-          </header>
-          <ol class="pillars">
-            <li data-reveal>
-              <span class="pillar-num">No. 1</span>
-              <h3>Detail-driven</h3>
-              <p>Clean edges, healthy blades, nothing missed. The small stuff is the whole job.</p>
-            </li>
-            <li data-reveal>
-              <span class="pillar-num">No. 2</span>
-              <h3>Client-focused</h3>
-              <p>You get a real person, a consistent schedule, and a crew that listens to how you like your property kept.</p>
-            </li>
-            <li data-reveal>
-              <span class="pillar-num">No. 3</span>
-              <h3>Committed to excellence</h3>
-              <p>High-quality care with a personal touch, delivered the same way every visit, all season long.</p>
-            </li>
-            <li data-reveal>
-              <span class="pillar-num">No. 4</span>
-              <h3>Licensed &amp; insured</h3>
-              <p>Fully covered, so there's nothing for you to worry about while we work.</p>
-            </li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ QUOTE ============ -->
     <section class="quote" id="quote">
       <div class="wrap quote-grid">
         <div class="quote-intro" data-reveal>
@@ -332,25 +225,23 @@
         </div>
 
         <form class="quote-form" data-quote-form novalidate data-reveal>
-          <fieldset class="chips">
+          <fieldset>
             <legend>What do you need?</legend>
             <div class="chip-set">
-            <label><input type="checkbox" name="services" value="Mowing & trimming" checked><span>Mowing &amp; trimming</span></label>
-            <label><input type="checkbox" name="services" value="Seasonal cleanup"><span>Seasonal cleanup</span></label>
-            <label><input type="checkbox" name="services" value="Landscape detailing"><span>Landscape detailing</span></label>
-            <label><input type="checkbox" name="services" value="Snow removal (waitlist)"><span>Snow removal <small>waitlist</small></span></label>
+              <label><input type="checkbox" name="services" value="Mowing & trimming" data-chip="mowing" checked><span>Mowing &amp; trimming</span></label>
+              <label><input type="checkbox" name="services" value="Seasonal cleanup" data-chip="cleanup"><span>Seasonal cleanup</span></label>
+              <label><input type="checkbox" name="services" value="Landscape detailing" data-chip="detailing"><span>Landscape detailing</span></label>
+              <label><input type="checkbox" name="services" value="Snow removal (waitlist)" data-chip="snow"><span>Snow removal <small>waitlist</small></span></label>
             </div>
           </fieldset>
-
-          <fieldset class="segmented">
+          <fieldset>
             <legend>How often?</legend>
             <div class="seg-set">
-            <label><input type="radio" name="frequency" value="Weekly" checked><span>Weekly</span></label>
-            <label><input type="radio" name="frequency" value="Bi-weekly"><span>Bi-weekly</span></label>
-            <label><input type="radio" name="frequency" value="Not sure yet"><span>Not sure yet</span></label>
+              <label><input type="radio" name="frequency" value="Weekly" checked><span>Weekly</span></label>
+              <label><input type="radio" name="frequency" value="Bi-weekly"><span>Bi-weekly</span></label>
+              <label><input type="radio" name="frequency" value="Not sure yet"><span>Not sure yet</span></label>
             </div>
           </fieldset>
-
           <div class="field-row">
             <label class="field">
               <span class="field-label">Name <abbr title="required">*</abbr></span>
@@ -376,7 +267,6 @@
             <span class="field-label">Anything we should know? <em>optional</em></span>
             <textarea name="notes" rows="3" placeholder="Gate code, dog in the yard, the corner that never grows&hellip;"></textarea>
           </label>
-
           <div class="form-foot">
             <button class="btn btn-large" type="submit">Send request</button>
             <p class="form-status" data-form-status role="status" aria-live="polite"></p>
@@ -386,14 +276,21 @@
     </section>
   </main>
 
-  <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <p class="footer-tag">Raising the standard,<br><em>one lawn at a time.</em></p>
       <div class="footer-col">
+        <h2 class="footer-h">Services</h2>
+        <a href="services/mowing-trimming.html">Mowing &amp; Trimming</a>
+        <a href="services/seasonal-cleanups.html">Seasonal Cleanups</a>
+        <a href="services/landscape-detailing.html">Landscape Detailing</a>
+        <a href="services/snow-removal.html">Snow Removal</a>
+      </div>
+      <div class="footer-col">
         <h2 class="footer-h">Get in touch</h2>
         <a href="tel:2622903375">262-290-3375</a>
         <a href="mailto:greenstandard.team@gmail.com">greenstandard.team@gmail.com</a>
+        <a href="index.html#quote">Request a quote</a>
       </div>
       <div class="footer-col">
         <h2 class="footer-h">Follow along</h2>
