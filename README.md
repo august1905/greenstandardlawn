@@ -16,7 +16,7 @@ The preview is marked `noindex`, so it won't show up in search results or compet
 | `services/landscape-detailing.html` | Service page. |
 | `services/snow-removal.html` | "Coming soon" page with a waitlist button. |
 
-Every service page has a photo banner, a short intro with key facts, three "what's included" cards, that service's months on the season chart, a quote button, and links to the other services.
+Every service page has a photo banner, a short intro with key facts, three "what's included" cards, a quote button, and links to the other services.
 
 The **Services** menu in the header is a dropdown on desktop (hover or click) and an expanding list in the mobile menu.
 The quote buttons on service pages link to `index.html?service=…#quote`, which pre-selects that service in the form.
@@ -43,7 +43,8 @@ The header and footer are repeated in each page, so a change to the menu or foot
 ## Photos
 
 - The "Our work" photo on the home page is Green Standard's own, loaded from the current Wix site.
-- The hero, service tiles and banners are free [Unsplash](https://unsplash.com/license) photos used as placeholders. Swap them for Green Standard's own photos (their Instagram is a good source) by changing the `images.unsplash.com/...` URLs.
+- The Mowing & Trimming tile and banner use the lawn-and-ivy photo from the current site's About page, also loaded from Wix. It comes from Wix's built-in photo library, and Wix licenses those for use on Wix sites, so replace it before leaving Wix.
+- The rest (hero, other tiles and banners) are free [Unsplash](https://unsplash.com/license) photos with no people in them, used as placeholders. Swap them for Green Standard's own photos (their Instagram is a good source) by changing the `images.unsplash.com/...` URLs.
 
 ## Before this goes live
 

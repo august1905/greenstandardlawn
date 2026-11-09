@@ -408,8 +408,6 @@ button { font: inherit; }
   opacity: 0;
   transition: transform 1.2s cubic-bezier(0.5, 0, 0.75, 0) var(--d, 0s), opacity 1s ease calc(var(--d, 0s) + 0.15s);
 }
-.ruler-note { margin-top: 18px; font-family: var(--f-mono); font-size: 0.76rem; letter-spacing: 0.03em; color: rgba(237, 236, 236, 0.7); }
-.ruler-again { margin-left: 0.6em; padding: 0; border: 0; background: none; color: var(--plum-tint); font: inherit; text-decoration: underline; text-underline-offset: 0.3em; cursor: pointer; }
 
 .pillars { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--rule-on-dark); }
 .pillars li { padding: 28px 0 30px; border-bottom: 1px solid var(--rule-on-dark); }
@@ -503,7 +501,6 @@ button { font: inherit; }
 .included p { color: var(--ink-soft); max-width: 40ch; }
 
 .svc-plot { padding-bottom: clamp(88px, 11vw, 150px); }
-.svc-season { padding-top: clamp(88px, 11vw, 150px); }
 
 .cta-band { padding: clamp(72px, 9vw, 120px) 0; background: var(--forest); color: var(--bone); }
 .cta-grid { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px 48px; }
